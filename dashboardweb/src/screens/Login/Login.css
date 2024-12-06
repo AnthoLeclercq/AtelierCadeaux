@@ -1,0 +1,83 @@
+.login-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #3E4A57;
+    background-image: url(../../assets/images/bg_espaceadmin.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #3E4A57;
+    padding: 1%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 20vw;
+    text-align: center;
+}
+
+.login-title {
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+}
+
+input#email {
+    margin-bottom: 5%; 
+    }
+
+.login-button {
+    background-color: #e7bd06;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    margin-top: 5%;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 45%;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #F9CD0E;
+}
+
+div.message {
+    padding: 15px;
+    margin: 10px;
+    font-size: smaller;
+    color: #B52B27;
+    background-color: rgba(217, 83, 79, 0.4);
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #d9534f;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form, button {
+    animation: fadeIn 1s ease;
+}

@@ -1,0 +1,16 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.191.0/containers/docker-existing-docker-compose
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+    "name": "expo-dev",
+    "build": {
+		"dockerfile": "Dockerfile"
+	},
+    "extensions": [
+        "michelemelluso.code-beautifier",
+        "mrmlnc.vscode-less",
+        "dbaeumer.vscode-eslint"
+    ],
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [ 19000, 19001, 19002 ]
+}

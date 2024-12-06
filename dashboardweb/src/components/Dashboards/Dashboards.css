@@ -1,0 +1,43 @@
+.card {
+  overflow: hidden;
+  height: 300px; 
+  width: 350px; 
+}
+
+.bg-users {
+  background-color: #B0CDB9;
+}
+
+.bg-posts {
+  background-color: #3E4A57;
+}
+
+
+.card-body .rotate {
+  z-index: 8;
+  float: right;
+  height: 100%;
+}
+
+.card-body .rotate i {
+  color: rgba(20, 20, 20, 0.15);
+  position: absolute;
+  left: auto;
+  right: -10px;
+  bottom: 0;
+  display: block;
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+  -ms-transform: rotate(-44deg);
+  transform: rotate(-44deg);
+}
+
+.chart-container {
+  margin-top: 50px;
+  margin-right: 50px;
+  background-color: #fff; /* Définissez une couleur de fond blanche */
+  padding: 20px;
+  border-radius: 10px;
+}
+

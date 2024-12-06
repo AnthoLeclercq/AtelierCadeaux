@@ -1,0 +1,56 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    container_name: gpe_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gpedb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+    volumes:
+      - ./sql-scripts:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.2
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_USER: user
+      PMA_PASSWORD: root
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+    container_name: elasticsearch
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ELASTIC_PASSWORD: elasticpassword
+    ports:
+      - 9200:9200
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+
+#  alfred:
+#    build:
+#      context: ../../alfred
+#      dockerfile: Dockerfile
+#    ports:
+#      - 5002:5002
+#    volumes:
+#      - ../../alfred:/app
+#    working_dir: /app
+#    environment:
+#      - FLASK_ENV=development
+
+volumes:
+  esdata1:
+    driver: local

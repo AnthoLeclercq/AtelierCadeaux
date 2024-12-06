@@ -1,0 +1,19 @@
+// .devcontainer/devcontainer.json
+
+{
+    "name": "Python",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": "./",
+    },
+    // "forwardPorts": [8000],
+    // "appPort": [8000],
+    "remoteUser": "vscode",
+    "extensions": [
+      "ms-python.python"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    }
+  }
+  

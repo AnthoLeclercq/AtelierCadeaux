@@ -1,0 +1,6 @@
+alfred/saved_models/encoders/Personnalite_encoder.pkl filter=lfs diff=lfs merge=lfs -text
+Affiche/femme_avec_cadeau.png filter=lfs diff=lfs merge=lfs -text
+client/assets/images/gift_alfred.gif filter=lfs diff=lfs merge=lfs -text
+*.pkl filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
